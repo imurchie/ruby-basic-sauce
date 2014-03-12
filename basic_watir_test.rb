@@ -13,7 +13,6 @@ class ExampleTest < Test::Unit::TestCase
         username   = ENV['SAUCE_USERNAME']
         access_key = ENV['SAUCE_ACCESS_KEY']
 
-        # @driver = Selenium::WebDriver.for(
         @driver = Watir::Browser.new(
           :remote,
           :url => "http://#{username}:#{access_key}@ondemand.saucelabs.com:80/wd/hub",
